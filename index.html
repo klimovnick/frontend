@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend 1.0</title>
+    <title>Frontend 2.0</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>Версия 1.0</h1>
+
+    <h1>Версия 2.0</h1>
+
+    <h2>Сохранение данных</h2>
 
     <label for="text">Введите текст:</label>
 
@@ -22,6 +25,20 @@
     <button onclick="sendData()">Отправить</button>
 
     <p id="status"></p>
+
+    <hr>
+
+    <h2>Получение данных</h2>
+
+    <button onclick="getData()">Получить данные</button>
+
+    <textarea
+        id="result"
+        rows="10"
+        readonly
+        placeholder="Здесь появятся данные из data.txt"
+    ></textarea>
+
 </div>
 
 <script src="script.js"></script>
