@@ -26,3 +26,19 @@ async function sendData() {
         console.error(error);
     }
 }
+
+
+async function getData() {
+    const resultField = document.getElementById("result");
+
+    try {
+        const response = await fetch("http://127.0.0.1:5000/data");
+
+        const result = await response.json();
+
+        resultField.value = result.data;
+    } catch (error) {
+        resultField.value = "Ошибка получения данных";
+        console.error(error);
+    }
+}
